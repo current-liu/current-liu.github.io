@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>My hexo_00 | Liuchao&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MultiDict()传入json时，两个key相同的话，会取第二个，把第一个舍弃,这不科学呀 123456try:    body = request.get_json()   except BadRequest:    body = &amp;#123;&amp;#125;    body.update(&amp;#123;&apos;bit_id&apos;: bittle_id&amp;#125;)    form = AlgorithmP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My hexo_00">
+<meta property="og:url" content="http://yoursite.com/2018/01/06/My-hexo-00/index.html">
+<meta property="og:site_name" content="Liuchao&#39;Blog">
+<meta property="og:description" content="MultiDict()传入json时，两个key相同的话，会取第二个，把第一个舍弃,这不科学呀 123456try:    body = request.get_json()   except BadRequest:    body = &amp;#123;&amp;#125;    body.update(&amp;#123;&apos;bit_id&apos;: bittle_id&amp;#125;)    form = AlgorithmP">
+<meta property="og:updated_time" content="2018-01-06T15:26:41.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My hexo_00">
+<meta name="twitter:description" content="MultiDict()传入json时，两个key相同的话，会取第二个，把第一个舍弃,这不科学呀 123456try:    body = request.get_json()   except BadRequest:    body = &amp;#123;&amp;#125;    body.update(&amp;#123;&apos;bit_id&apos;: bittle_id&amp;#125;)    form = AlgorithmP">
+  
+    <link rel="alternate" href="/atom.xml" title="Liuchao&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Liuchao&#39;Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-My-hexo-00" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/06/My-hexo-00/" class="article-date">
+  <time datetime="2018-01-06T15:24:41.000Z" itemprop="datePublished">2018-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      My hexo_00
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="MultiDict"><a href="#MultiDict" class="headerlink" title="MultiDict()"></a>MultiDict()</h2><pre><code>传入json时，两个key相同的话，会取第二个，把第一个舍弃,这不科学呀
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    body = request.get_json()   </span><br><span class="line"><span class="keyword">except</span> BadRequest:</span><br><span class="line">    body = &#123;&#125;</span><br><span class="line">    body.update(&#123;<span class="string">'bit_id'</span>: bittle_id&#125;)</span><br><span class="line">    form = AlgorithmPatchForm(MultiDict(body))</span><br></pre></td></tr></table></figure>
+<h2 id="sorted"><a href="#sorted" class="headerlink" title="sorted()"></a>sorted()</h2><p>按value值对字典排序要对字典的value排序则需要用到key参数，在这里主要提供一种使用lambda表达式的方法，如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   d = &#123;<span class="string">'x'</span>:<span class="number">1</span>,<span class="string">'y'</span>:<span class="number">2</span>&#125;</span><br><span class="line">sorted(d.items(),key=<span class="keyword">lambda</span> item:(item[<span class="number">0</span>],item[<span class="number">1</span>]), reverse=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+<p>这里的d.items()实际上是将d转换为可迭代对象，迭代对象的元素为（‘lilee’,25）、（‘wangyan’,21）、（‘liqun’,32）、（‘lidaming’,19），items()方法将字典的元素转化为了元组，而这里key参数对应的lambda表达式的意思则是选取元组中的第二个元素作为比较参数（如果写作key=lambda item:item[0]的话则是选取第一个元素、第二个元素作为比较对象，也就是key值作为比较对象，先按item[0]排，再按item[1]排；reverse=True 表示降序。</p>
+<p>lambda x:y中x表示输入参数，y表示lambda函数的返回值），所以采用这种方法可以对字典的value进行排序。注意排序后的返回值是一个list，而原字典中的名值对被转换为了list中的元组。</p>
+<h2 id="classmethod与-staticmethod"><a href="#classmethod与-staticmethod" class="headerlink" title="@classmethod与@staticmethod"></a>@classmethod与@staticmethod</h2><p><a href="http://www.open-open.com/lib/view/open1500623560063.html" target="_blank" rel="noopener">http://www.open-open.com/lib/view/open1500623560063.html</a></p>
+<h2 id="conda与Anaconda"><a href="#conda与Anaconda" class="headerlink" title="conda与Anaconda"></a>conda与Anaconda</h2><p><a href="http://blog.csdn.net/pfm685757/article/details/74995517" target="_blank" rel="noopener">http://blog.csdn.net/pfm685757/article/details/74995517</a></p>
+<h2 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a>lambda</h2><p><a href="http://www.cnblogs.com/evening/archive/2012/03/29/2423554.html" target="_blank" rel="noopener">http://www.cnblogs.com/evening/archive/2012/03/29/2423554.html</a></p>
+<h2 id="你应该知道的-RPC-原理"><a href="#你应该知道的-RPC-原理" class="headerlink" title="你应该知道的 RPC 原理"></a>你应该知道的 RPC 原理</h2><p><a href="http://blog.jobbole.com/92290/" target="_blank" rel="noopener">http://blog.jobbole.com/92290/</a></p>
+<h2 id="进入python的交互模式"><a href="#进入python的交互模式" class="headerlink" title="进入python的交互模式"></a>进入python的交互模式</h2><pre><code>import IPython
+IPython.embed()
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/06/My-hexo-00/" data-id="cjc3k2gvt0000sobzyf1ntpqb" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/06/My-hexo-00/">My hexo_00</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/06/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Liu Chao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
